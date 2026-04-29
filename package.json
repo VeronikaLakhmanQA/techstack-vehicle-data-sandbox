@@ -1,12 +1,10 @@
 {
   "name": "techstack-vehicle-data-sandbox",
   "private": true,
-  "workspaces": [
-    "web"
-  ],
   "scripts": {
+    "install:web": "npm --prefix web ci",
     "dev": "npm --prefix web run dev",
-    "build": "npm --prefix web run build",
+    "build": "npm --prefix web ci && npm --prefix web run build",
     "lint": "npm --prefix web run lint"
   }
 }
