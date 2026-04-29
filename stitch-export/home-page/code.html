@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Techstack Vehicle Data Sandbox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#edeeef",
+                    "on-surface-variant": "#44474d",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#0d1c32",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary-fixed-dim": "#ffba20",
+                    "inverse-on-surface": "#f0f1f2",
+                    "outline": "#75777e",
+                    "on-secondary-container": "#fefcff",
+                    "surface": "#f8f9fa",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#ac7b00",
+                    "inverse-primary": "#b9c7e4",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary-fixed-dim": "#adc7ff",
+                    "secondary": "#0059bb",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#0d1c32",
+                    "primary": "#000000",
+                    "primary-fixed": "#d6e3ff",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c5c6cd",
+                    "on-background": "#191c1d",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#271900",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-container": "#0070ea",
+                    "tertiary-fixed": "#ffdea8",
+                    "on-primary-container": "#76849f",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#004493",
+                    "surface-tint": "#515f78",
+                    "on-tertiary-fixed-variant": "#5e4200",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#001a41",
+                    "tertiary-container": "#271900",
+                    "surface-dim": "#d9dadb",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xl": "48px",
+                    "gutter": "24px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "h1": ["Inter"],
+                    "code": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Inter"],
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "code": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .soft-shadow {
+            box-shadow: 0 16px 24px -12px rgba(10, 25, 47, 0.06);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-[#F8F9FA] dark:bg-slate-950 border-b border-[#E0E0E0] dark:border-slate-800 shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex items-center justify-between px-8 h-16 w-full max-w-[1440px] mx-auto">
+<div class="text-lg font-bold text-[#0A192F] dark:text-slate-100 uppercase tracking-widest font-h3">
+                Techstack Vehicle Data Sandbox
+            </div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="font-['Inter'] text-sm font-bold tracking-tight text-[#0A192F] dark:text-blue-400 border-b-2 border-blue-600 pb-5 mb-[-20px]" href="/">Home</a>
+<a class="font-['Inter'] text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-2 py-1" href="#">Single VIN</a>
+<a class="font-['Inter'] text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-2 py-1" href="#">Multiple VINs</a>
+<a class="font-['Inter'] text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-2 py-1" href="#">Test Scenarios</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help_outline">help_outline</span>
+</div>
+<button class="bg-secondary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-all active:scale-95">
+                    Test Data Only
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="bg-surface-container-lowest py-20 px-8 border-b border-outline-variant">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md border border-outline-variant">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="visibility_off">visibility_off</span>
+                        No VIN on this page
+                    </span>
+<h1 class="font-h1 text-h1 text-primary max-w-2xl">
+                        Stable vehicle data pages for browser extension testing
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        A controlled sandbox for validating VIN detection, highlighting, and Carpool Browser Extension flows without relying on unstable third-party automotive websites.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary text-on-primary px-6 py-3 rounded-lg font-label-md text-body-md font-semibold flex items-center gap-2 hover:shadow-lg transition-all">
+                            Open Single VIN Scenario
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-outline text-primary px-6 py-3 rounded-lg font-label-md text-body-md font-semibold hover:bg-surface-container transition-all">
+                            Open Multiple VINs Scenario
+                        </button>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg border-l-4 border-secondary max-w-xl">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Note:</strong> This homepage intentionally contains no VIN codes and is used to validate the extension fallback state.
+                            </p>
+</div>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-surface-container to-surface-variant border border-outline-variant soft-shadow flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#0059bb 1px, transparent 1px); background-size: 20px 20px;"></div>
+<img alt="Data visualization dashboard" class="w-4/5 h-4/5 object-cover rounded-xl shadow-2xl border border-outline-variant" data-alt="clean dark UI dashboard showing abstract vehicle data charts and technical code components with minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6rwlbrHHNMCsZmpL8H8-YZccyS-R13SF2a_EsnoziWY_PDjtJ19avF6QRmUh0bJyDOXZzGGL-m3Uf70OMLFrP3v2Bpd-EgbcwXXNoOmHNHwExYFHyL4IWmiYBnyZZtbSWZhqudEXbA6ZHCXynnrlhesmXI4RwDxySrmHaIEuu-r1YVY-AhEZSTdb3kV5KfC0HIq4BoLfVTj3Fm2f_tjHsG8bNm5Nts8E9YcbZpHGRCAifoi2HCqE7nz5RSMr4OrVr5xURDC1otuuK"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Available Test Scenarios -->
+<section class="py-20 px-8 bg-surface">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex items-center justify-between mb-10">
+<h2 class="font-h2 text-h2 text-primary">Available test scenarios</h2>
+<div class="h-px bg-outline-variant flex-grow ml-8"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant soft-shadow flex flex-col items-start h-full">
+<div class="flex justify-between w-full mb-6">
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="home">home</span>
+</div>
+<span class="px-3 py-1 bg-surface-container rounded-full text-on-surface-variant font-label-md text-label-md border border-outline-variant">0 VINs</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Home / No VIN Scenario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8 flex-grow">
+                            Validates that the extension remains dormant or shows correct "No data found" messaging when a page contains no automotive identifiers.
+                        </p>
+<button class="w-full py-3 rounded-lg border-2 border-secondary text-secondary font-semibold font-label-md flex items-center justify-center gap-2 bg-secondary/5 cursor-default">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Current Scenario
+                        </button>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant soft-shadow flex flex-col items-start h-full">
+<div class="flex justify-between w-full mb-6">
+<div class="p-3 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-white" data-icon="directions_car">directions_car</span>
+</div>
+<span class="px-3 py-1 bg-secondary-container/10 text-secondary rounded-full font-label-md text-label-md border border-secondary/20">1 VIN</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Single VIN Scenario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8 flex-grow">
+                            A focused detail page layout featuring one primary vehicle identifier to test precise highlighting and individual data lookup flows.
+                        </p>
+<button class="w-full py-3 rounded-lg bg-primary text-on-primary font-semibold font-label-md flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+                            Open Scenario
+                            <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant soft-shadow flex flex-col items-start h-full">
+<div class="flex justify-between w-full mb-6">
+<div class="p-3 bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="list_alt">list_alt</span>
+</div>
+<span class="px-3 py-1 bg-primary-container text-on-primary-container rounded-full font-label-md text-label-md">3 VINs</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Multiple VINs Scenario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8 flex-grow">
+                            An inventory-style grid view containing several vehicles to validate bulk detection, list highlighting, and carousel interactions.
+                        </p>
+<button class="w-full py-3 rounded-lg bg-primary text-on-primary font-semibold font-label-md flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+                            Open Scenario
+                            <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Built for stable automation -->
+<section class="py-20 px-8 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">Built for stable automation</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="flex flex-col items-center text-center p-6 space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="storage">storage</span>
+<h4 class="font-h3 text-body-lg font-bold">Static test data</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Non-volatile content that won't change between test runs.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="speed">speed</span>
+<h4 class="font-h3 text-body-lg font-bold">Fast loading</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Minimal assets for sub-second page performance in QA pipelines.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="shield_check">shield</span>
+<h4 class="font-h3 text-body-lg font-bold">Controlled VIN coverage</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic identification patterns for 100% test accuracy.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="extension">extension</span>
+<h4 class="font-h3 text-body-lg font-bold">Extension-ready</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Optimized DOM structure for reliable browser extension interaction.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#E0E0E0] dark:border-slate-800 mt-auto bg-white dark:bg-slate-900">
+<div class="max-w-[1440px] mx-auto py-8 px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-semibold text-slate-800 dark:text-slate-200 font-h3">Techstack Vehicle Data Sandbox</span>
+<p class="font-['Inter'] text-xs font-normal opacity-80 text-slate-600 dark:text-slate-400">
+                    Techstack Vehicle Data Sandbox — Controlled test environment for automation purposes only.
+                </p>
+</div>
+<div class="flex items-center gap-6">
+<a class="font-['Inter'] text-xs font-normal opacity-80 text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 transition-opacity" href="#">Documentation</a>
+<a class="font-['Inter'] text-xs font-normal opacity-80 text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 transition-opacity" href="#">API Reference</a>
+<a class="font-['Inter'] text-xs font-normal opacity-80 text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 transition-opacity" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

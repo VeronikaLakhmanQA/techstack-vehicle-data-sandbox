@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-label="Dashboard placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edeeef"/>
+      <stop offset="1" stop-color="#e1e3e4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0059bb"/>
+      <stop offset="1" stop-color="#0070ea"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="960" height="720" rx="28" fill="url(#bg)"/>
+  <g opacity="0.12">
+    <circle cx="120" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="160" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="200" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="240" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="280" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="320" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="360" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="400" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="440" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="480" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="520" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="560" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="600" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="640" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="680" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="720" cy="160" r="2" fill="#0059bb"/>
+    <circle cx="760" cy="120" r="2" fill="#0059bb"/>
+    <circle cx="800" cy="160" r="2" fill="#0059bb"/>
+  </g>
+  <rect x="84" y="92" width="792" height="536" rx="20" fill="#ffffff" stroke="#c5c6cd"/>
+  <rect x="120" y="132" width="260" height="110" rx="14" fill="#f3f4f5" stroke="#c5c6cd"/>
+  <rect x="412" y="132" width="424" height="110" rx="14" fill="#f3f4f5" stroke="#c5c6cd"/>
+  <rect x="120" y="274" width="716" height="146" rx="14" fill="#f3f4f5" stroke="#c5c6cd"/>
+  <rect x="120" y="452" width="716" height="140" rx="14" fill="#f3f4f5" stroke="#c5c6cd"/>
+  <rect x="144" y="156" width="172" height="10" rx="5" fill="#e1e3e4"/>
+  <rect x="144" y="176" width="208" height="10" rx="5" fill="#e1e3e4"/>
+  <rect x="144" y="196" width="148" height="10" rx="5" fill="#e1e3e4"/>
+  <rect x="436" y="156" width="196" height="10" rx="5" fill="#e1e3e4"/>
+  <rect x="436" y="176" width="260" height="10" rx="5" fill="#e1e3e4"/>
+  <rect x="436" y="196" width="164" height="10" rx="5" fill="#e1e3e4"/>
+  <path d="M168 386c54-40 92-18 134-56s88-22 132-52 94-18 140-52 94-26 166-66" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+  <g opacity="0.55">
+    <rect x="144" y="304" width="120" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="144" y="324" width="180" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="144" y="344" width="150" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="144" y="482" width="160" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="144" y="502" width="220" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="144" y="522" width="190" height="10" rx="5" fill="#e1e3e4"/>
+  </g>
+</svg>
+

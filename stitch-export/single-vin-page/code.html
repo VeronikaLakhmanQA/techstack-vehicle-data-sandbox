@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Single VIN Scenario | Techstack Vehicle Data Sandbox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#edeeef",
+                      "on-surface-variant": "#44474d",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-variant": "#e1e3e4",
+                      "tertiary-fixed-dim": "#ffba20",
+                      "inverse-on-surface": "#f0f1f2",
+                      "outline": "#75777e",
+                      "on-secondary-container": "#fefcff",
+                      "surface": "#f8f9fa",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-tertiary-container": "#ac7b00",
+                      "inverse-primary": "#b9c7e4",
+                      "surface-container-high": "#e7e8e9",
+                      "secondary-fixed-dim": "#adc7ff",
+                      "secondary": "#0059bb",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#0d1c32",
+                      "primary": "#000000",
+                      "primary-fixed": "#d6e3ff",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2e3132",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#c5c6cd",
+                      "on-background": "#191c1d",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#271900",
+                      "surface-bright": "#f8f9fa",
+                      "secondary-container": "#0070ea",
+                      "tertiary-fixed": "#ffdea8",
+                      "on-primary-container": "#76849f",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "tertiary": "#000000",
+                      "on-secondary-fixed-variant": "#004493",
+                      "surface-tint": "#515f78",
+                      "on-tertiary-fixed-variant": "#5e4200",
+                      "surface-container-low": "#f3f4f5",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#f8f9fa",
+                      "on-surface": "#191c1d",
+                      "secondary-fixed": "#d8e2ff",
+                      "on-secondary-fixed": "#001a41",
+                      "tertiary-container": "#271900",
+                      "surface-dim": "#d9dadb",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "xl": "48px",
+                      "gutter": "24px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "body-sm": ["Inter"],
+                      "h1": ["Inter"],
+                      "code": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h3": ["Inter"],
+                      "h2": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "code": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface min-h-screen flex flex-col">
+<nav class="bg-[#F8F9FA] dark:bg-slate-950 text-[#0A192F] dark:text-blue-400 font-['Inter'] text-sm font-medium tracking-tight shadow-sm dark:shadow-none border-b border-[#E0E0E0] dark:border-slate-800 docked full-width top-0 sticky z-50">
+<div class="flex items-center justify-between px-8 h-16 w-full max-w-[1440px] mx-auto">
+<div class="text-lg font-bold text-[#0A192F] dark:text-slate-100 uppercase tracking-widest">
+                Techstack Vehicle Data Sandbox
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-3 py-2" href="#">Home</a>
+<a class="text-[#0A192F] dark:text-blue-400 border-b-2 border-blue-600 pb-5 mb-[-20px] font-bold" href="#">Single VIN</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-3 py-2" href="#">Multiple VINs</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A192F] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200 rounded-md px-3 py-2" href="#">Test Scenarios</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-slate-100 p-2 rounded-full cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-slate-100 p-2 rounded-full cursor-pointer transition-colors" data-icon="help_outline">help_outline</span>
+</div>
+<button class="bg-secondary text-white px-4 py-2 rounded-lg text-xs font-bold scale-95 transition-transform duration-150 ease-in-out hover:brightness-110">
+                    Test Data Only
+                </button>
+</div>
+</div>
+</nav>
+<main class="flex-grow max-w-[1440px] w-full mx-auto px-8 py-xl">
+<header class="mb-lg">
+<h1 class="font-h1 text-h1 text-primary mb-xs">Single VIN Scenario</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">This page contains exactly one valid visible VIN code for browser extension detection testing.</p>
+<div class="flex gap-sm mt-md">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md">
+                    1 VIN
+                </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-label-md">
+                    Static test listing
+                </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-md font-label-md">
+                    Automation ready
+                </span>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-[0_16px_24px_rgba(10,25,47,0.04)]">
+<div class="relative aspect-video bg-surface-container">
+<img alt="Luxury vehicle" class="w-full h-full object-cover" data-alt="Modern 2025 luxury SUV in metallic grey parked on a clean architectural driveway with soft morning lighting and sharp reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa3uAF4NowlA4QCktGiOBcCYrU8gLhK39amcEVcW7ORvW7KUSk7XOMHzCNDeJIzS9iv_2tUik2ectGZIxMGAPNA74O9Hl0wWNeiMEy8mFEkBxHwm34pDfJmuYB0FLRnwQDbOQlPWD2MrJFjT4cpRd2TWQ_rXuySO_pNVZ1lHl5XCDny4KGmzOJdw4QTByGpxP8GjFDA7jhG0wJ8x0akQSnvkdfBUgDsqr32y78OBUiwjZWDZg0Y2IziC95z36FVTn7DEF-T8PpAZqU"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-md">
+<div>
+<h2 class="font-h2 text-h2 text-primary">2025 BMW X3</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">xDrive30i • Alpine White • SensaTec Upholstery</p>
+</div>
+<div class="text-right">
+<span class="font-h2 text-h2 text-secondary">$45,998</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sandbox Market Price</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md mt-lg border-t border-outline-variant pt-lg">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Mileage</p>
+<p class="font-body-md text-body-md text-primary font-semibold">24,696 mi</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Engine</p>
+<p class="font-body-md text-body-md text-primary font-semibold">2.0L I4 Turbo</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Drive</p>
+<p class="font-body-md text-body-md text-primary font-semibold">AWD</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Condition</p>
+<p class="font-body-md text-body-md text-primary font-semibold">New</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-[0_16px_24px_rgba(10,25,47,0.04)]">
+<h3 class="font-h3 text-h3 text-primary mb-md">Technical Identity</h3>
+<div class="space-y-md">
+<div class="p-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<p class="font-label-md text-label-md text-on-surface-variant mb-xs">VIN</p>
+<p class="font-body-lg text-body-lg text-primary font-bold tracking-widest select-all">5UX53GP06S9070837</p>
+</div>
+<div class="p-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<p class="font-label-md text-label-md text-on-surface-variant mb-xs">Stock ID</p>
+<p class="font-body-md text-body-md text-primary font-semibold uppercase">TS-2025-X3-001</p>
+</div>
+</div>
+<div class="mt-lg flex flex-col gap-sm">
+<button class="w-full bg-secondary text-white font-bold py-3 rounded-lg transition-all hover:brightness-110 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+                            View Test Listing
+                        </button>
+<button class="w-full bg-white border border-outline text-[#0A192F] font-bold py-3 rounded-lg transition-all hover:bg-surface-container flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+                            Inspect VIN
+                        </button>
+</div>
+</div>
+<div class="bg-primary-container p-lg rounded-xl border border-outline-variant shadow-[0_16px_24px_rgba(10,25,47,0.04)]">
+<h3 class="font-h3 text-h3 text-white mb-sm">QA Data Inspector</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container mb-md">Raw payload state for automation verification.</p>
+<div class="bg-black/40 rounded p-md font-code text-code text-on-primary-container overflow-hidden">
+<pre class="whitespace-pre-wrap"><code>{
+  "scenario": "single_vin",
+  "valid": true,
+  "source": "static_sandbox"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full border-t border-[#E0E0E0] dark:border-slate-800 bg-white dark:bg-slate-900 mt-auto tonal-shift">
+<div class="max-w-[1440px] mx-auto py-8 px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Techstack Vehicle Data Sandbox</span>
+<p class="font-['Inter'] text-xs font-normal opacity-80 text-slate-600 dark:text-slate-400">Controlled test environment for automation purposes only.</p>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 font-['Inter'] text-xs transition-opacity" href="#">Documentation</a>
+<a class="text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 font-['Inter'] text-xs transition-opacity" href="#">API Reference</a>
+<a class="text-slate-500 hover:text-slate-900 hover:underline decoration-blue-500 font-['Inter'] text-xs transition-opacity" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Minimal global defaults (no animations). */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    Apple Color Emoji, Segoe UI Emoji;
+  background: #f8f9fa;
+  color: #191c1d;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Slightly softened focus ring for accessibility + test stability. */
+:focus-visible {
+  outline: 2px solid #0059bb;
+  outline-offset: 2px;
+}

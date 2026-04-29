@@ -1,0 +1,13 @@
+{
+  "name": "techstack-vehicle-data-sandbox",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "lint": "npm --prefix web run lint"
+  }
+}
+

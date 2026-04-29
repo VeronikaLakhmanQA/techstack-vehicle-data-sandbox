@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Vehicle placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1c32"/>
+      <stop offset="1" stop-color="#0059bb"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#g)"/>
+  <g opacity="0.14">
+    <path d="M0 410c110-70 210-88 320-60 130 34 210 30 300-40s190-120 340-150v380H0z" fill="#ffffff"/>
+  </g>
+  <rect x="66" y="72" width="828" height="396" rx="22" fill="#ffffff" opacity="0.18"/>
+  <g fill="#ffffff" opacity="0.85">
+    <rect x="120" y="124" width="260" height="14" rx="7"/>
+    <rect x="120" y="152" width="340" height="12" rx="6" opacity="0.75"/>
+    <rect x="120" y="182" width="220" height="12" rx="6" opacity="0.75"/>
+  </g>
+  <g opacity="0.95">
+    <rect x="120" y="252" width="720" height="156" rx="18" fill="#f3f4f5"/>
+    <rect x="156" y="294" width="240" height="14" rx="7" fill="#e1e3e4"/>
+    <rect x="156" y="322" width="520" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="156" y="342" width="380" height="10" rx="5" fill="#e1e3e4"/>
+    <rect x="156" y="368" width="160" height="10" rx="5" fill="#e1e3e4"/>
+  </g>
+</svg>
+
